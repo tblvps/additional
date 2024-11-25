@@ -26,10 +26,10 @@ SECRET_KEY = 'django-insecure-m-aal1_s+xx9jca50!0rw*2-0_u(f4+jsjy&j!6h=io@+w-zf2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('admin', 'tblvps@gmail.com'),
 )
 MANAGERS = ADMINS
 
