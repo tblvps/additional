@@ -10,7 +10,7 @@ if ENV_FILE:
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-sezyox_us4xelux$#mfaf+_(@fl03)th28cu1j-!_wjf-a+!6r'
+#SECRET_KEY = 'django-insecure-sezyox_us4xelux$#mfaf+_(@fl03)th28cu1j-!_wjf-a+!6r'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
