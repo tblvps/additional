@@ -27,13 +27,13 @@ SITE_ID = 1
 LOGIN_URL = '/admin/login/'
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'shahinmondal42bd@gmail.com'
-EMAIL_HOST_PASSWORD = 'fsyy spny fwbh qmjy'
+EMAIL_HOST_USER = "shahinmondal42bd@gmail.com"
+EMAIL_HOST_PASSWORD = "fsyy spny fwbh qmjy"
+DEFAULT_FROM_EMAIL = "shahinmondal42bd@gmail.com"
 
 
 AUTHENTICATION_BACKENDS = [
@@ -193,6 +193,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 ACCOUNT_LOGIN_BY_CODE_ENABLED = True
