@@ -16,7 +16,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 ADMINS = (
      ('admin', 'tblvps@gmail.com'),
 )
@@ -160,15 +160,15 @@ USE_I18N = True
 
 USE_TZ = True
 
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+#DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 SECRET_KEY = os.getenv('SECRET_KEY')
-DATABASE_URL = os.getenv('DATABASE_URL')
-LINODE_API_TOKEN = os.getenv('LINODE_API_TOKEN')
+#DATABASE_URL = os.getenv('DATABASE_URL')
+#LINODE_API_TOKEN = os.getenv('LINODE_API_TOKEN')
 
-AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
-AUTH0_CLIENT_ID = os.environ.get("AUTH0_CLIENT_ID")
-AUTH0_CLIENT_SECRET = os.environ.get("AUTH0_CLIENT_SECRET")
+#AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
+#AUTH0_CLIENT_ID = os.environ.get("AUTH0_CLIENT_ID")
+#AUTH0_CLIENT_SECRET = os.environ.get("AUTH0_CLIENT_SECRET")
 
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN")
 
