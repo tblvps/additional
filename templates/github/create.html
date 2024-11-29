@@ -1,0 +1,28 @@
+{% extends "allauth/layouts/base.html" %}
+
+{% block title %}Create Repository{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4 text-center">Create a New Repository</h1>
+    <form method="post" class="p-4 border rounded shadow">
+        {% csrf_token %}
+        <div class="form-outline mb-4 p-2 bg-body-tertiary border">
+            <input type="text" id="repoName" name="name" class="form-control" required />
+            <label class="form-label" for="repoName">Repository Name</label>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="privateRepo" name="private">
+            <label class="form-check-label" for="privateRepo">Private</label>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-block mt-4">
+            <i class="fas fa-save"></i> Create Repository
+        </button>
+    </form>
+    <a href="{% url 'list_repos' %}" class="btn btn-light mt-3">
+        <i class="fas fa-arrow-left"></i> Back to Repositories
+    </a>
+</div>
+{% endblock %}

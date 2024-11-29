@@ -1,0 +1,28 @@
+{% extends "allauth/layouts/base.html" %}
+
+{% block title %}Delete Repository{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4 text-center text-danger">Delete a Repository</h1>
+    <form method="post" class="p-4 border rounded shadow">
+        {% csrf_token %}
+        <div class="form-outline mb-4">
+            <input type="text" id="ownerName" name="owner" class="form-control" required />
+            <label class="form-label" for="ownerName">Owner Name</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="text" id="repoName" name="repo" class="form-control" required />
+            <label class="form-label" for="repoName">Repository Name</label>
+        </div>
+
+        <button type="submit" class="btn btn-danger btn-block mt-4">
+            <i class="fas fa-trash"></i> Delete Repository
+        </button>
+    </form>
+    <a href="{% url 'list_repos' %}" class="btn btn-light mt-3">
+        <i class="fas fa-arrow-left"></i> Back to Repositories
+    </a>
+</div>
+{% endblock %}
