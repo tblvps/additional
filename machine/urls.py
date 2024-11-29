@@ -8,8 +8,8 @@ from accounts.views import index_view
 from github.views import list_repos
 from oauth2_provider import urls as oauth2_urls
 
-admin.autodiscover()
-admin.site.login = secure_admin_login(admin.site.login)
+#admin.autodiscover()
+#admin.site.login = secure_admin_login(admin.site.login)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
