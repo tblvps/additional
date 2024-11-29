@@ -16,7 +16,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tblhostbd.onrender.com']
+
 ADMINS = (
      ('admin', 'tblvps@gmail.com'),
 )
