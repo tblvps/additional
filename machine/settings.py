@@ -106,6 +106,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     'allauth.usersessions.middleware.UserSessionsMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'machine.urls'
