@@ -129,7 +129,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'machine.wsgi.application'
 
-
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
