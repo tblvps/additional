@@ -106,7 +106,6 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     'allauth.usersessions.middleware.UserSessionsMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'machine.urls'
@@ -129,11 +128,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'machine.wsgi.application'
 
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
